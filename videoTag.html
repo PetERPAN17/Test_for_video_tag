@@ -1,0 +1,47 @@
+<html>
+    <haed>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+
+                const video1 = document.getElementById('video');
+                const video2 = document.getElementById('video2');
+                const source = document.getElementById('source');
+
+                $('#change_video1_btn').on('click', function(){
+                    source.setAttribute('src', 'video1.mp4');
+                    video1.load();
+                    video1.play();
+
+                    video2.src = 'video1.mp4';
+                    // video2.muted = false;
+                    video2.load();
+                    video2.play();
+                });
+
+                $('#change_video2_btn').on('click', function(){
+                    source.setAttribute('src', 'video2.mp4');
+                    video1.load();
+                    video1.play();
+
+                    video2.src = 'video2.mp4';
+                    // video2.muted = false;
+                    video2.load();
+                    video2.play();
+                });
+            });
+        </script>
+    </haed>
+    <body>
+        <video id="video" poster="" preload="metadata" width="640" height="360" controls autoplay muted>
+            <source id="source" src="video1.mp4" type="video/mp4">
+            <!-- <source src="example.webm" type="video/webm">
+            <source src="example.ogv" type="video/ogg"> -->
+        </video>
+        <video id="video2" src="video1.mp4".mp4" width="640" height="360" muted autoplay></video>
+        <br>
+        <button id="change_video1_btn">change video1</button>
+        <button id="change_video2_btn">change video2</button>
+    </body>
+</html>
