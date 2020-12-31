@@ -10,22 +10,22 @@
                 const source = document.getElementById('source');
 
                 $('#change_video1_btn').on('click', function(){
-                    source.setAttribute('src', 'video1.mp4');
+                    source.setAttribute('src', 'video1.webm');
                     video1.load();
                     video1.play();
 
-                    video2.src = 'video1.mp4';
+                    video2.src = 'video1.webm';
                     // video2.muted = false;
                     video2.load();
                     video2.play();
                 });
 
                 $('#change_video2_btn').on('click', function(){
-                    source.setAttribute('src', 'video2.mp4');
+                    source.setAttribute('src', 'video2.webm');
                     video1.load();
                     video1.play();
 
-                    video2.src = 'video2.mp4';
+                    video2.src = 'video2.webm';
                     // video2.muted = false;
                     video2.load();
                     video2.play();
@@ -35,11 +35,11 @@
     </haed>
     <body>
         <video id="video1" poster="" preload="metadata" width="640" height="360" controls autoplay muted>
-            <source id="source" src="video1.mp4" type="video/mp4">
+            <source id="source" src="video1.webm" type="video/webm">
             <!-- <source src="example.webm" type="video/webm">
             <source src="example.ogv" type="video/ogg"> -->
         </video>
-        <video id="video2" src="video1.mp4".mp4" width="640" height="360" muted autoplay></video>
+        <video id="video2" src="video1.webm" width="640" height="360" muted autoplay></video>
         <br>
         <button id="change_video1_btn">change video1</button>
         <button id="change_video2_btn">change video2</button>
